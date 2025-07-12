@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DigiCognitive - Software Solutions</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo">Digi<span>Cognitive</span></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Empowering Your Digital Future</h1>
+    <p>
+      We build robust software solutions for startups, businesses, and professionals.<br>
+      Trust. Innovation. Excellence.
+    </p>
+    <a href="#contact"><button class="cta-btn">Get in Touch</button></a>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      DigiCognitive is a team of passionate software developers and digital strategists. We deliver modern, scalable, and secure solutions tailored to your business needs.
+    </p>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Custom Software Development</li>
+      <li>Web & Mobile App Development</li>
+      <li>Cloud Integration & Automation</li>
+      <li>UI/UX Design</li>
+      <li>IT Consulting</li>
+    </ul>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <h2>Project Gallery</h2>
+    <div class="gallery-images">
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Project 1">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Project 2">
+      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Project 3">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Project 4">
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="testimonial-list">
+      <div class="testimonial">
+        "DigiCognitive transformed our workflow with their seamless software solutions."
+        <div class="name">- Aryan Gupta</div>
+      </div>
+      <div class="testimonial">
+        "Highly professional team with innovative ideas. Loved working with them!"
+        <div class="name">- Sneha Verma</div>
+      </div>
+      <div class="testimonial">
+        "Reliable, creative, and always on time. Strongly recommended."
+        <div class="name">- Vivek Sharma</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/xgvygqvn"
+  method="POST">
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>   
+  </section>
+
+  <footer>
+    &copy; 2025 DigiCognitive. All rights reserved.
+  </footer>
+  <script>
+    // Optional: Success message after form submission (for better UX)
+    document.querySelector('form').addEventListener('submit', function(e) {
+      setTimeout(function() {
+        document.getElementById('form-message').innerText = 'Thank you for contacting us!';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

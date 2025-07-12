@@ -1,0 +1,206 @@
+:root {
+  --primary: #2563eb;
+  --accent: #fbbf24;
+  --bg: #f8fafc;
+  --text: #1e293b;
+  --nav-bg: rgba(255,255,255,0.95);
+  --nav-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(34,40,49,0.8),rgba(34,40,49,0.8)),
+    url('https://images.unsplash.com/photo-1465101178521-c1a9136a3c5a?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Header/Navbar */
+header {
+  background: var(--nav-bg);
+  box-shadow: var(--nav-shadow);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+.logo span {
+  color: var(--accent);
+  margin-left: 6px;
+}
+nav {
+  display: flex;
+  gap: 24px;
+}
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: var(--primary);
+}
+
+/* Sections */
+section {
+  padding: 48px 16px;
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  background: rgba(255,255,255,0.87);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 60vh;
+  background: rgba(255,255,255,0.7);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+  color: #334155;
+}
+.cta-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cta-btn:hover {
+  background: var(--accent);
+  color: var(--text);
+}
+.about, .services, .gallery, .testimonials, .contact {
+  margin-bottom: 32px;
+  background: rgba(255,255,255,0.96);
+}
+.services ul {
+  list-style: disc inside;
+  font-size: 1.1rem;
+  color: #334155;
+  margin: 0;
+  padding: 0 0 0 18px;
+}
+
+/* Gallery */
+.gallery-images {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gallery-images img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+
+/* Testimonials */
+.testimonial-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.testimonial {
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 18px;
+  width: 260px;
+  font-size: 1rem;
+  color: #475569;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.testimonial .name {
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 10px;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 400px;
+  margin: auto;
+}
+input, textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+input[type="submit"] {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+input[type="submit"]:hover {
+  background: var(--accent);
+  color: var(--text);
+}
+.form-message {
+  color: var(--primary);
+  font-weight: 500;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: var(--nav-bg);
+  text-align: center;
+  padding: 18px 0;
+  color: #64748b;
+  font-size: 1rem;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 48px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .hero h1 { font-size: 2rem; }
+  nav { gap: 12px; }
+  .gallery-images img { width: 100px; height: 70px; }
+  .testimonial { width: 100%; }
+  section { padding: 24px 4px; }
+}
